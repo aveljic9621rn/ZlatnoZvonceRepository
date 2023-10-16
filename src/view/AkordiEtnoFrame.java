@@ -15,7 +15,7 @@ import java.util.Scanner;
 
 public class AkordiEtnoFrame extends Application {
 
-    private static final String FILE_PATH = "path/to/your/file.txt";
+    private static final String FILE_PATH = "src/resources/etnopesme.txt";
 
     private ListView<String> listBox;
 

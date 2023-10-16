@@ -24,14 +24,14 @@ public class AkordiChooseFrame extends Application {
         Button ruskePesmeButton = createStyledButton("Ruske pesme");
         Button backButton = createStyledButton("Nazad");
 
-        backButton.setOnAction(event -> {
-            new MainMenuFrame().start();
-        });
+
+        etnoPesmeButton.setOnAction(event -> new AkordiEtnoFrame().start(primaryStage));
+        backButton.setOnAction(event -> new MainMenuFrame().start(primaryStage));
 
         VBox root = new VBox(10);
         root.setAlignment(Pos.CENTER);
         root.setPadding(new Insets(10));
-        root.getChildren().addAll(etnoPesmeButton, patriotskePesmeButton, duhovnePesmeButton, autorskePesmeButton, ruskePesmeButton);
+        root.getChildren().addAll(etnoPesmeButton, patriotskePesmeButton, duhovnePesmeButton, autorskePesmeButton, ruskePesmeButton, backButton);
 
         StackPane stackPane = new StackPane(root);
         stackPane.setAlignment(Pos.CENTER);

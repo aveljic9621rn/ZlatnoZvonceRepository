@@ -64,7 +64,7 @@ public class LoginFrame extends Application {
         // Set the scene on the primary stage
         primaryStage.setScene(scene);
         primaryStage.setTitle("Zlatno Zvonce");
-        primaryStage.getIcons().add(new Image("resources/Logo ZZ.jpg"));
+        primaryStage.getIcons().add(new Image("resources/logo ZZ - light.jpg"));
 
         // Show the primary stage
         primaryStage.show();

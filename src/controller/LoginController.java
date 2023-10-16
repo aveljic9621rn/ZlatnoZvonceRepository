@@ -12,7 +12,7 @@ public class LoginController {
         String username = nameTextField.getText();
         if (!username.isEmpty()) {
             if (listClanovi.contains(username)){
-                MainMenuFrame mainMenuFrame = new MainMenuFrame(username);
+                MainMenuFrame mainMenuFrame = new MainMenuFrame();
                 mainMenuFrame.start(primaryStage);
             }
             else{

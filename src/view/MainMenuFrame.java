@@ -22,7 +22,7 @@ public class MainMenuFrame extends Application {
 
     private String username;
 
-    public MainMenuFrame(String username) {
+    public MainMenuFrame() {
         this.username = username;
     }
 
@@ -34,7 +34,7 @@ public class MainMenuFrame extends Application {
         mainMenuLayout.setPadding(new Insets(20));
 
         // Create the welcome label
-        Label welcomeLabel = new Label("Cao " + username + "! Drago mi je sto te vidim :)");
+        Label welcomeLabel = new Label("Cao! Drago mi je sto te vidim :)");
         welcomeLabel.setFont(Font.font("Tahoma", 20));
         mainMenuLayout.getChildren().add(welcomeLabel);
 
@@ -47,7 +47,7 @@ public class MainMenuFrame extends Application {
         Button exitButton = new Button("Zatvori");
 
 
-        Image image = new Image("resources/Logo ZZ.jpg");
+        Image image = new Image("resources/logo ZZ - light.jpg");
         ImageView imageView = new ImageView(image);
 
         mainMenuLayout.getChildren().add(imageView);
@@ -62,7 +62,7 @@ public class MainMenuFrame extends Application {
         tekstoviButton.prefWidthProperty().bind(buttonWidthBinding);
         exitButton.prefWidthProperty().bind(buttonWidthBinding);
 
-        akordiButton.setOnAction(event -> AkordiChooseController.handleAkordiChooseButton(primaryStage, username));
+        akordiButton.setOnAction(event -> AkordiChooseController.handleAkordiChooseButton(primaryStage));
         exitButton.setOnAction(event -> primaryStage.close());
 
         // Add the buttons to the main menu layout
@@ -79,7 +79,7 @@ public class MainMenuFrame extends Application {
         // Set the scene on the primary stage
         primaryStage.setScene(scene);
         primaryStage.setTitle("Zlatno Zvonce");
-        primaryStage.getIcons().add(new Image("resources/Logo ZZ.jpg"));
+        primaryStage.getIcons().add(new Image("resources/logo ZZ - light.jpg"));
 
         // Show the primary stage
         primaryStage.show();
